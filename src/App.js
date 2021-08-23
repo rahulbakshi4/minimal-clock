@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [getTime, setTime] = useState(new Date().toLocaleTimeString())
+
+  const timeSplit = getTime.split(":")
+  const secSplit = timeSplit[2].split(' ')
+  timeSplit.splice(2, 1)
+
+  const time = timeSplit.concat(secSplit)
+  let [hour, min, sec, phase] = time
+  
+  if(hour < 10){
+    hour = '0'+hour
+  }
+
+  function updateTime() {
+    let t = new Date().toLocaleTimeString()
+    setTime(t)
+  }
+  setInterval(updateTime, 1000)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="wrapper">
+        <div className="timelist">
+          <div className="time hour-side"><h1>{hour}</h1><p className="details">{phase}</p>
+           </div>
+          <div className="time minute-side"><h1>{min}</h1>
+          <p className="details">{sec}</p>
+          </div>
+          </div>
+        </div>
+
+      </div>
   );
 }
 

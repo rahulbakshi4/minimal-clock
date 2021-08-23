@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #171010;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 1rem;
+  margin: 1rem;
+  color: aliceblue;
+}
+.wrapper{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 95vh;
+}
+.timelist{
+  list-style: none;
+  display: flex;
+}
+.time{
+  padding: 2rem;
+  margin: 1rem;
+  color: aliceblue;
+  font-size: 11rem;
+  border-radius: 0.75rem;
+  font-family: 'Bebas Neue', cursive;
+  display: flex;
+  letter-spacing: 0.25rem;
+  align-items: flex-end;
+  background-color: #363636;
+ height: 28rem;
+}
+.hour-side{
+ flex-direction: row-reverse;
+ padding-left: 0.5rem;
+ padding-bottom: 0.5rem;
+}
+.minute-side{
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+h1{
+  padding: 0 0.5rem;
+  font-weight: 400;
+}
+.details{
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:600px) {
+  
+  html,body{
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .wrapper{
+    max-width: 22rem;
+   
+  }
+  .timelist{
+    flex-direction: column;
+  }
+  .time{
+    font-size: 8rem;
+    height: 16rem;
+  }
+  .time{
+    height: 20rem;
   }
 }
