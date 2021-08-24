@@ -13,7 +13,7 @@ function App() {
   const time = timeSplit.concat(secSplit)
   let [hour, min, sec, phase] = time
   
-  if(hour < 10){
+  if(hour < 10 && hour.length ===1){
     hour = '0'+hour
   }
 
