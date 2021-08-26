@@ -58,7 +58,7 @@ button{
   display: flex;
   letter-spacing: 0.25rem;
   align-items: flex-end;
- height: 24rem;
+  height: 24rem;
 }
 .hour-side{
  flex-direction: row-reverse;
@@ -111,16 +111,13 @@ footer a{
   }
   .time{
     font-size: 7rem;
-    height: 16rem;
-  }
-  .time{
-    height: 18rem;
+    height: 19rem;
   }
 nav{
   padding: .25rem;
 }
   h1{
-    height: 300px;
+    height: 280px;
   }
   img{
     margin-right: 1rem;
