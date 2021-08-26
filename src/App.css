@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-y: hidden;
 }
 
 nav{
@@ -39,8 +40,9 @@ button{
 .wrapper{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  height:85vh;
+  padding-top: 6rem;
 
 }
 .timelist{
@@ -48,7 +50,7 @@ button{
   display: flex;
 }
 .time{
-  padding: 2rem;
+  padding: 2rem 3rem;
   margin: 1rem;
   font-size: 11rem;
   border-radius: 0.75rem;
@@ -56,7 +58,7 @@ button{
   display: flex;
   letter-spacing: 0.25rem;
   align-items: flex-end;
- height: 28rem;
+ height: 24rem;
 }
 .hour-side{
  flex-direction: row-reverse;
@@ -70,31 +72,61 @@ button{
 h1{
   padding: 0 0.5rem;
   font-weight: 400;
+  height: 400px;
 }
 .details{
   font-size: 2rem;
+}
+
+footer ul{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 2rem 3rem 2rem;
+
+}
+footer li{
+  padding: 0 .5rem;
+   font-size: 1.25rem;
+
+}
+footer a{
+  color:#E7E2E2; 
 }
 
 @media screen and (max-width:600px) {
   
   html,body{
     overflow-x: hidden;
+    overflow-y: visible;
   }
   .wrapper{
     max-width: 25rem;
-   
+    align-items: flex-start;
+    padding-top: 0;
   }
   .timelist{
     flex-direction: column;
   }
   .time{
-    font-size: 8rem;
+    font-size: 7rem;
     height: 16rem;
   }
   .time{
-    height: 20rem;
+    height: 18rem;
+  }
+nav{
+  padding: .25rem;
+}
+  h1{
+    height: 300px;
   }
   img{
-    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  footer ul{
+    padding: 1rem 2rem 2rem 1rem;
+    
   }
 }
