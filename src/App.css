@@ -4,23 +4,44 @@
   padding: 0;
   margin: 0;
 }
-body{
-  background-color: #171010;
-}
+
 nav{
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   list-style: none;
-  padding: 0 1rem;
-  margin: 1rem;
+  padding:  1rem;
   color: aliceblue;
 }
+img{
+  width: 40px;
+  height: 40px;
+}
+button{
+  background: transparent;
+  border: none;
+}
+.isdark{
+  background:#363636;
+  color: #fff;
+}
+.islight{
+  background: #DDD;
+  color:#171010;
+}
+.bgDark{
+  background-color: #040303;
+}
+.bgLight{
+  background-color: #FFFDF9;
+}
+
 .wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 100vh;
+
 }
 .timelist{
   list-style: none;
@@ -29,14 +50,12 @@ nav{
 .time{
   padding: 2rem;
   margin: 1rem;
-  color: aliceblue;
   font-size: 11rem;
   border-radius: 0.75rem;
   font-family: 'Bebas Neue', cursive;
   display: flex;
   letter-spacing: 0.25rem;
   align-items: flex-end;
-  background-color: #363636;
  height: 28rem;
 }
 .hour-side{
@@ -62,7 +81,7 @@ h1{
     overflow-x: hidden;
   }
   .wrapper{
-    max-width: 22rem;
+    max-width: 25rem;
    
   }
   .timelist{
@@ -74,5 +93,8 @@ h1{
   }
   .time{
     height: 20rem;
+  }
+  img{
+    margin-bottom: 1rem;
   }
 }
